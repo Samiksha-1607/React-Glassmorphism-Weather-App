@@ -1,0 +1,128 @@
+:root {
+  --card-bg: rgba(0, 0, 0, 0.75);
+  --accent: #00eaff;
+  --muted: rgba(255, 255, 255, 0.8);
+}
+
+.image-container {
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  transition: background-image 0.5s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* layout */
+.page {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 360px;
+  padding: 35px;
+  border-radius: 24px;
+  background-color: var(--card-bg);
+  backdrop-filter: blur(15px);
+  color: #fff;
+  box-sizing: border-box;
+}
+
+/* search */
+.search-container {
+  display: flex;
+  margin-bottom: 20px;
+  background-color: rgba(255, 255, 255, 0.08);
+  border-radius: 30px;
+  padding: 4px;
+}
+
+.search-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  outline: none;
+  font-size: 1rem;
+}
+
+.search-button {
+  border: none;
+  background: transparent;
+  color: #00d4ff;
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 0 15px;
+}
+
+/* text */
+.location-text {
+  color: var(--accent);
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.main-title {
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: "Orbitron", sans-serif;
+  margin-bottom: 8px;
+}
+
+.temp-text {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.desc-text {
+  font-size: 1rem;
+  margin-bottom: 25px;
+  opacity: 0.9;
+}
+
+/* stats */
+.info-container {
+  line-height: 1.4;
+  min-height: 100px;
+}
+
+.stats-row {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  opacity: 0.7;
+  margin-bottom: 4px;
+}
+
+.stat-value {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.loading-text {
+  color: #ccc;
+}
+
+.error-text {
+  color: salmon;
+}
+
+/* NOTE: background-image is now applied inline from React to avoid css-loader resolving images.
+   Ensure files exist in public/images/ (e.g. public/images/tatooine.jpg) */
